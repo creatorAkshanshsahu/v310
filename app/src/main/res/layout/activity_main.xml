@@ -1,0 +1,98 @@
+<FrameLayout xmlns:ns0="http://schemas.android.com/apk/res/android" xmlns:ns1="http://schemas.android.com/apk/res-auto" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="@color/abyss">
+  <com.aktv.app.AuroraView ns0:id="@+id/aurora" ns0:layout_width="match_parent" ns0:layout_height="match_parent" />
+  <View ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="@drawable/scrim_left" />
+  <View ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="@drawable/scrim_bottom" />
+  <LinearLayout ns0:id="@+id/home" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:orientation="vertical" ns0:paddingTop="22dp">
+    <LinearLayout ns0:id="@+id/topBar" ns0:layout_width="match_parent" ns0:layout_height="52dp" ns0:layout_marginStart="56dp" ns0:layout_marginEnd="56dp" ns0:orientation="horizontal" ns0:gravity="center_vertical">
+      <LinearLayout ns0:layout_width="0dp" ns0:layout_height="match_parent" ns0:layout_weight="1" ns0:gravity="center_vertical|start">
+        <ImageView ns0:layout_width="38dp" ns0:layout_height="38dp" ns0:src="@drawable/ic_mark" />
+        <TextView ns0:id="@+id/akText" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginStart="8dp" ns0:text="AK TV" ns0:textColor="@color/text" ns0:textSize="18sp" ns0:fontFamily="@font/sora_bold" ns0:letterSpacing="0.02" ns0:maxLines="1" />
+      </LinearLayout>
+      <FrameLayout ns0:id="@+id/segTrack" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:padding="4dp">
+        <View ns0:id="@+id/segIndicator" ns0:layout_width="0dp" ns0:layout_height="match_parent" />
+        <LinearLayout ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:orientation="horizontal">
+          <TextView ns0:id="@+id/segLive" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="Live TV" ns0:focusable="true" ns0:clickable="true" ns0:maxLines="1" ns0:paddingStart="24dp" ns0:paddingEnd="24dp" ns0:paddingTop="9dp" ns0:paddingBottom="9dp" ns0:textSize="15sp" ns0:fontFamily="@font/sora_semibold" />
+          <TextView ns0:id="@+id/segV2" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="V2 · 24/7" ns0:focusable="true" ns0:clickable="true" ns0:maxLines="1" ns0:paddingStart="24dp" ns0:paddingEnd="24dp" ns0:paddingTop="9dp" ns0:paddingBottom="9dp" ns0:textSize="15sp" ns0:fontFamily="@font/sora_semibold" />
+          <TextView ns0:id="@+id/segSites" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="TG Video" ns0:focusable="true" ns0:clickable="true" ns0:maxLines="1" ns0:paddingStart="24dp" ns0:paddingEnd="24dp" ns0:paddingTop="9dp" ns0:paddingBottom="9dp" ns0:textSize="15sp" ns0:fontFamily="@font/sora_semibold" />
+        </LinearLayout>
+      </FrameLayout>
+      <LinearLayout ns0:layout_width="0dp" ns0:layout_height="match_parent" ns0:layout_weight="1" ns0:gravity="center_vertical|end">
+        <TextView ns0:id="@+id/searchBtn" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginEnd="20dp" ns0:text="Search" ns0:focusable="true" ns0:clickable="true" ns0:maxLines="1" ns0:drawableStart="@drawable/ic_search" ns0:drawablePadding="8dp" ns0:drawableTint="@color/text_dim" ns0:paddingStart="16dp" ns0:paddingEnd="18dp" ns0:paddingTop="8dp" ns0:paddingBottom="8dp" ns0:textColor="@color/text_dim" ns0:textSize="14sp" ns0:fontFamily="@font/sora_semibold" />
+        <TextClock ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:format12Hour="h:mm" ns0:format24Hour="HH:mm" ns0:maxLines="1" ns0:textColor="@color/text_dim" ns0:textSize="17sp" ns0:fontFamily="@font/sora_regular" />
+      </LinearLayout>
+    </LinearLayout>
+    <FrameLayout ns0:id="@+id/hero" ns0:layout_width="match_parent" ns0:layout_height="250dp" ns0:layout_marginStart="56dp" ns0:layout_marginEnd="56dp">
+      <LinearLayout ns0:id="@+id/heroText" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginEnd="214dp" ns0:layout_gravity="start|center_vertical" ns0:orientation="vertical">
+        <LinearLayout ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:orientation="horizontal" ns0:gravity="center_vertical">
+          <View ns0:id="@+id/heroDot" ns0:layout_width="8dp" ns0:layout_height="8dp" ns0:background="@drawable/dot" />
+          <TextView ns0:id="@+id/heroBadge" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginStart="10dp" ns0:textColor="@color/text_dim" ns0:textSize="14sp" ns0:fontFamily="@font/sora_semibold" />
+        </LinearLayout>
+        <TextView ns0:id="@+id/heroTitle" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginTop="6dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:textColor="@color/text" ns0:textSize="40sp" ns0:fontFamily="@font/sora_light" ns0:letterSpacing="0" ns0:includeFontPadding="false" />
+        <TextView ns0:id="@+id/heroProg" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginTop="8dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:textColor="@color/text" ns0:textSize="15sp" ns0:visibility="gone" />
+        <ProgressBar ns0:id="@+id/heroProgress" style="?android:attr/progressBarStyleHorizontal" ns0:layout_width="240dp" ns0:layout_height="3dp" ns0:minHeight="3dp" ns0:maxHeight="3dp" ns0:layout_marginTop="7dp" ns0:max="1000" ns0:visibility="gone" />
+        <TextView ns0:id="@+id/heroDesc" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginTop="6dp" ns0:maxLines="2" ns0:ellipsize="end" ns0:textColor="@color/text_dim" ns0:textSize="13sp" ns0:visibility="gone" />
+        <TextView ns0:id="@+id/heroNext" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginTop="4dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:textColor="@color/text_dim" ns0:textSize="12sp" ns0:visibility="gone" />
+        <LinearLayout ns0:id="@+id/heroChips" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="12dp" ns0:orientation="horizontal" />
+      </LinearLayout>
+      <FrameLayout ns0:id="@+id/heroOrb" ns0:layout_width="176dp" ns0:layout_height="176dp" ns0:layout_gravity="end|center_vertical" ns0:layout_marginEnd="24dp">
+        <ImageView ns0:id="@+id/heroLogo" ns0:layout_width="104dp" ns0:layout_height="104dp" ns0:layout_gravity="center" ns0:scaleType="fitCenter" />
+        <TextView ns0:id="@+id/heroMono" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="center" ns0:textColor="#FFFFFF" ns0:textSize="84sp" ns0:fontFamily="@font/sora_bold" ns0:includeFontPadding="false" ns0:visibility="gone" />
+      </FrameLayout>
+    </FrameLayout>
+    <TextView ns0:id="@+id/status" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginStart="56dp" ns0:textColor="@color/text_dim" ns0:textSize="13sp" />
+    <androidx.recyclerview.widget.RecyclerView ns0:id="@+id/rows" ns0:layout_width="match_parent" ns0:layout_height="0dp" ns0:layout_weight="1" ns0:paddingStart="52dp" ns0:paddingTop="4dp" ns0:paddingBottom="120dp" ns0:clipToPadding="false" ns0:clipChildren="false" ns0:overScrollMode="never" ns0:requiresFadingEdge="none" ns0:fadeScrollbars="false" />
+  </LinearLayout>
+  <FrameLayout ns0:id="@+id/searchLayer" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="#F005060D" ns0:visibility="gone" ns0:clickable="true">
+    <LinearLayout ns0:id="@+id/searchBody" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:layout_marginStart="56dp" ns0:layout_marginEnd="56dp" ns0:layout_marginTop="8dp" ns0:layout_marginBottom="8dp" ns0:orientation="horizontal">
+      <LinearLayout ns0:id="@+id/searchKeyboard" ns0:layout_width="420dp" ns0:layout_height="match_parent" ns0:orientation="vertical">
+        <TextView ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="Search" ns0:textColor="@color/text" ns0:textSize="26sp" ns0:fontFamily="@font/sora_bold" />
+        <TextView ns0:id="@+id/searchQuery" ns0:layout_width="match_parent" ns0:layout_height="56dp" ns0:layout_marginTop="4dp" ns0:layout_marginBottom="4dp" ns0:gravity="center_vertical" ns0:paddingStart="20dp" ns0:paddingEnd="20dp" ns0:singleLine="true" ns0:ellipsize="start" ns0:textSize="20sp" ns0:fontFamily="@font/sora_regular" />
+        <LinearLayout ns0:id="@+id/searchKeys" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:orientation="vertical" />
+      </LinearLayout>
+      <LinearLayout ns0:id="@+id/searchResultColumn" ns0:layout_width="0dp" ns0:layout_height="match_parent" ns0:layout_weight="1" ns0:layout_marginStart="44dp" ns0:orientation="vertical">
+        <TextView ns0:id="@+id/searchCount" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:paddingBottom="10dp" ns0:paddingTop="10dp" ns0:textColor="@color/text_faint" ns0:textSize="13sp" ns0:fontFamily="@font/sora_semibold" />
+        <TextView ns0:id="@+id/searchEmpty" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:paddingTop="12dp" ns0:textColor="@color/text_dim" ns0:textSize="15sp" />
+        <androidx.recyclerview.widget.RecyclerView ns0:id="@+id/searchResults" ns0:layout_width="match_parent" ns0:layout_height="0dp" ns0:layout_weight="1" ns0:clipToPadding="false" ns0:paddingBottom="24dp" ns0:overScrollMode="never" ns0:requiresFadingEdge="none" />
+      </LinearLayout>
+    </LinearLayout>
+  </FrameLayout>
+  <FrameLayout ns0:id="@+id/playerLayer" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="#000000" ns0:visibility="gone">
+    <androidx.media3.ui.PlayerView ns0:id="@+id/playerView" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns1:use_controller="false" ns1:resize_mode="fit" />
+    <View ns0:id="@+id/playerScrim" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="@drawable/scrim_player" ns0:alpha="0" />
+    <LinearLayout ns0:id="@+id/infoCard" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="bottom|start" ns0:layout_margin="40dp" ns0:orientation="horizontal" ns0:gravity="center_vertical" ns0:minWidth="420dp" ns0:paddingStart="16dp" ns0:paddingEnd="30dp" ns0:paddingTop="16dp" ns0:paddingBottom="16dp" ns0:alpha="0">
+      <FrameLayout ns0:id="@+id/infoLogoBox" ns0:layout_width="64dp" ns0:layout_height="64dp">
+        <ImageView ns0:id="@+id/infoLogo" ns0:layout_width="42dp" ns0:layout_height="42dp" ns0:layout_gravity="center" ns0:scaleType="fitCenter" />
+        <TextView ns0:id="@+id/infoMono" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:gravity="center" ns0:textSize="20sp" ns0:fontFamily="@font/sora_bold" ns0:includeFontPadding="false" ns0:visibility="gone" />
+      </FrameLayout>
+      <LinearLayout ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginStart="18dp" ns0:orientation="vertical">
+        <LinearLayout ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:orientation="horizontal" ns0:gravity="center_vertical">
+          <TextView ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="LIVE" ns0:background="@drawable/live_pill" ns0:textColor="#FFFFFF" ns0:textSize="10sp" ns0:fontFamily="@font/sora_bold" ns0:letterSpacing="0.08" ns0:paddingStart="8dp" ns0:paddingEnd="8dp" ns0:paddingTop="2dp" ns0:paddingBottom="2dp" />
+          <TextView ns0:id="@+id/infoCat" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginStart="10dp" ns0:textColor="@color/text_dim" ns0:textSize="13sp" />
+        </LinearLayout>
+        <TextView ns0:id="@+id/infoName" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="4dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:maxWidth="620dp" ns0:textColor="@color/text" ns0:textSize="24sp" ns0:fontFamily="@font/sora_semibold" />
+        <TextView ns0:id="@+id/infoNow" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="8dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:maxWidth="620dp" ns0:textColor="@color/text" ns0:textSize="15sp" ns0:visibility="gone" />
+        <ProgressBar ns0:id="@+id/infoProgress" style="?android:attr/progressBarStyleHorizontal" ns0:layout_width="280dp" ns0:layout_height="3dp" ns0:minHeight="3dp" ns0:maxHeight="3dp" ns0:layout_marginTop="7dp" ns0:max="1000" ns0:visibility="gone" />
+        <TextView ns0:id="@+id/infoDesc" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="6dp" ns0:maxLines="2" ns0:ellipsize="end" ns0:maxWidth="620dp" ns0:textColor="@color/text_dim" ns0:textSize="12sp" ns0:visibility="gone" />
+        <TextView ns0:id="@+id/infoNext" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="4dp" ns0:maxLines="1" ns0:ellipsize="end" ns0:maxWidth="620dp" ns0:textColor="@color/text_dim" ns0:textSize="12sp" ns0:visibility="gone" />
+        <TextView ns0:id="@+id/infoHint" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_marginTop="8dp" ns0:textColor="@color/text_faint" ns0:textSize="12sp" />
+      </LinearLayout>
+    </LinearLayout>
+    <TextClock ns0:id="@+id/playerClock" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="top|end" ns0:layout_margin="36dp" ns0:format12Hour="h:mm" ns0:format24Hour="HH:mm" ns0:textColor="@color/text" ns0:textSize="20sp" ns0:fontFamily="@font/sora_regular" ns0:alpha="0" ns0:shadowColor="#99000000" ns0:shadowRadius="12" />
+    <View ns0:id="@+id/guideScrim" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:background="@drawable/scrim_guide" ns0:visibility="gone" />
+    <LinearLayout ns0:id="@+id/guide" ns0:layout_width="wrap_content" ns0:layout_height="match_parent" ns0:layout_gravity="end" ns0:layout_margin="24dp" ns0:orientation="horizontal" ns0:padding="12dp" ns0:visibility="gone">
+      <LinearLayout ns0:id="@+id/guideCategories" ns0:layout_width="250dp" ns0:layout_height="match_parent" ns0:orientation="vertical">
+        <TextView ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:text="Categories" ns0:paddingStart="14dp" ns0:paddingTop="10dp" ns0:paddingBottom="8dp" ns0:textColor="@color/text_faint" ns0:textSize="13sp" ns0:fontFamily="@font/sora_semibold" />
+        <androidx.recyclerview.widget.RecyclerView ns0:id="@+id/catList" ns0:layout_width="match_parent" ns0:layout_height="0dp" ns0:layout_weight="1" ns0:clipToPadding="false" ns0:paddingBottom="24dp" ns0:overScrollMode="never" ns0:requiresFadingEdge="none" />
+      </LinearLayout>
+      <View ns0:id="@+id/guideDivider" ns0:layout_width="1dp" ns0:layout_height="match_parent" ns0:layout_marginTop="14dp" ns0:layout_marginBottom="14dp" ns0:layout_marginStart="8dp" ns0:background="#1FFFFFFF" ns0:visibility="gone" />
+      <LinearLayout ns0:id="@+id/chCol" ns0:layout_width="340dp" ns0:layout_height="match_parent" ns0:layout_marginStart="8dp" ns0:orientation="vertical" ns0:visibility="gone">
+        <TextView ns0:id="@+id/chHeader" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:paddingStart="12dp" ns0:paddingTop="10dp" ns0:paddingBottom="8dp" ns0:textColor="@color/text_faint" ns0:textSize="13sp" ns0:fontFamily="@font/sora_semibold" />
+        <EditText ns0:id="@+id/channelSearch" ns0:layout_width="match_parent" ns0:layout_height="44dp" ns0:layout_marginStart="8dp" ns0:layout_marginEnd="8dp" ns0:layout_marginBottom="8dp" ns0:paddingStart="14dp" ns0:paddingEnd="14dp" ns0:singleLine="true" ns0:hint="Search channels…" ns0:textColor="@color/text" ns0:textColorHint="@color/text_faint" ns0:textSize="13sp" ns0:fontFamily="@font/sora_regular" ns0:imeOptions="actionSearch" ns0:background="@drawable/live_pill" ns0:focusable="true" ns0:focusableInTouchMode="true" />
+        <androidx.recyclerview.widget.RecyclerView ns0:id="@+id/chList" ns0:layout_width="match_parent" ns0:layout_height="0dp" ns0:layout_weight="1" ns0:clipToPadding="false" ns0:paddingBottom="24dp" ns0:overScrollMode="never" ns0:requiresFadingEdge="none" />
+      </LinearLayout>
+    </LinearLayout>
+    <ProgressBar ns0:id="@+id/spinner" ns0:layout_width="56dp" ns0:layout_height="56dp" ns0:layout_gravity="center" ns0:indeterminateTint="@color/ion" />
+    <TextView ns0:id="@+id/playStatus" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="center" ns0:layout_marginTop="124dp" ns0:textColor="@color/text_dim" ns0:textSize="14sp" ns0:visibility="gone" />
+  </FrameLayout>
+  <com.aktv.app.AkIntroView ns0:id="@+id/splash" ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:clickable="true" ns0:focusable="false" />
+</FrameLayout>
